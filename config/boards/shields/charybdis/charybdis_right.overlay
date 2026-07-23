@@ -5,6 +5,7 @@
  */
  
 #include "charybdis.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -58,7 +59,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        scroll-layers = <7>;
+        // scroll-layers НЕ у драйвера — скролл делаем input-processor'ом (плавный, см. trackball_listener)
         snipe-layers = <8>;
       // automouse-layer НЕ задаётся — слой мыши включается удержанием Z (&lt 6 Z)
     };
@@ -70,9 +71,16 @@
 
 
 / {
-    trackball_listener {
+    trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        /* Плавный скролл: на слое 7 (SCROLL) движение шара -> колесо (hi-res).
+           Скорость регулируется первым числом делителя в zip_xy_scaler. */
+        scroller {
+            layers = <7>;
+            input-processors = <&zip_xy_scaler 2 1>, <&zip_xy_to_scroll_mapper>;
+        };
     };
 };
 
