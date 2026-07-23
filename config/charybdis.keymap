@@ -44,12 +44,12 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
             hold-trigger-on-release;
         };
-        /* Tap-dance из corne.c: 1 тап = Ctrl+Alt+B (tmux), 2 тапа = caps-word */
+        /* Tap-dance: 1 тап = caps-word (умный капс), 2 тапа = Ctrl+Alt+B (tmux) */
         td_tmux: tap_dance_tmux {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LC(LA(B))>, <&caps_word>;
+            bindings = <&caps_word>, <&kp LC(LA(B))>;
         };
     };
 
@@ -72,7 +72,7 @@
 &kp LGUI    &kp N1           &kp N2      &kp N3     &kp N4     &kp N5          &kp N6      &kp N7      &kp N8      &kp N9       &kp N0      &kp RGUI
 &kp LCTRL   &kp EXCL         &kp AT      &kp HASH   &kp DLLR   &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp LPAR     &kp RPAR   &kp RCTRL
 &kp LALT    &kp NON_US_HASH  &kp TILDE   &kp LBKT   &kp RBKT   &kp KP_MINUS    &kp PIPE    &kp LBRC    &kp RBRC    &kp KP_PLUS  &kp EQUAL  &kp RALT
-                                         &none      &none      &none           &kp ENTER   &none       &td_tmux
+                                         &none      &none      &none           &kp ENTER   &kp LG(SPACE)  &td_tmux
             >;
         };
 
