@@ -120,8 +120,8 @@
         layer_6 {
             display-name = "PTR";
             bindings = <
-&trans  &trans     &trans    &trans     &trans     &trans        &trans  &trans     &trans     &trans     &trans    &trans
-&trans  &kp LALT   &kp LGUI  &mkp MB4   &mkp MB5   &trans        &trans  &mkp MB5   &mkp MB4   &kp RGUI   &kp RALT  &trans
+&trans  &trans     &trans    &mkp MB4   &mkp MB5   &trans        &trans  &mkp MB5   &mkp MB4   &trans     &trans    &trans
+&trans  &kp LALT   &kp LGUI  &kp LCTRL  &kp LSHFT  &trans        &trans  &kp RSHFT  &kp RCTRL  &kp RGUI   &kp RALT  &trans
 &trans  &trans     &mo 7     &mo 8      &trans     &bootloader   &trans  &trans     &mo 8      &mo 7      &trans    &trans
                              &mkp MB2   &mkp MB1   &mkp MB3      &mkp MB3  &mkp MB1   &mkp MB2
             >;
