@@ -100,9 +100,9 @@
         layer_4 {
             display-name = "FUNC";
             bindings = <
-&kp LGUI    &kp F5   &kp F6   &kp C_BRI_DN      &kp C_BRI_UP       &none      &kp C_MUTE    &kp C_PREV   &kp LG(D)             &kp F11   &kp F12   &kp RGUI
-&kp LCTRL   &kp F3   &kp F4   &kp LG(LBKT)      &kp LG(RBKT)       &none      &kp C_VOL_UP  &kp C_PP     &kp LG(A)             &kp F9    &kp F10   &kp RCTRL
-&kp LALT    &kp F1   &kp F2   &kp RC(RS(LEFT))  &kp RC(RS(RIGHT))  &none      &kp C_VOL_DN  &kp C_NEXT   &kp C_AL_CALCULATOR   &kp F7    &kp F8    &kp RALT
+&kp LGUI    &kp F9   &kp F10  &kp F11   &kp F12   &none      &kp C_MUTE    &kp C_PREV   &kp LG(D)             &none   &none   &kp RGUI
+&kp LCTRL   &kp F5   &kp F6   &kp F7    &kp F8    &none      &kp C_VOL_UP  &kp C_PP     &kp LG(A)             &none   &none   &kp RCTRL
+&kp LALT    &kp F1   &kp F2   &kp F3    &kp F4    &none      &kp C_VOL_DN  &kp C_NEXT   &kp C_AL_CALCULATOR   &none   &none   &kp RALT
                               &none             &kp LG(SPACE)      &none      &none         &none        &none
             >;
         };
