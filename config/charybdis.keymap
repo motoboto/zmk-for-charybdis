@@ -93,7 +93,7 @@
 &none   &none   &none   &none          &none          &none      &none   &kp HOME   &kp PSCRN   &kp PG_UP    &none      &none
 &none   &none   &none   &kp Y          &kp P          &kp ESC    &none   &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &none
 &none   &none   &none   &kp RC(RS(C))  &kp RC(RS(V))  &kp ENTER  &none   &kp END    &none       &kp PG_DN    &none      &none
-                        &none          &none          &none      &none   &none      &none
+                        &none          &none          &kp DEL    &none   &none      &none
             >;
         };
 
